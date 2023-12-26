@@ -1,1 +1,1 @@
-# ethan-portfolio-starter
+# adriana-portfolio-react-nextjs-tailwind-
