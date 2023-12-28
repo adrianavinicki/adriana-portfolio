@@ -44,6 +44,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
+            style={{ width: "100%" }}
             className="max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-5 xl:mb-16 break-words"
           >
             For years, I navigated finance and business, leading impactful
@@ -71,7 +72,45 @@ const Home = () => {
         </div>
       </div>
       {/* image */}
-      <div>image</div>
+      <div className="w-[1000px] h-full absolute right-0 bottom-0">
+        {/* bg img */}
+        <div
+          className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right
+         xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
+        ></div>
+        {/* particles */}
+        <div>Particles</div>
+
+        {/* avatar img */}
+        {/*<div className="relative bottom-16 lg:bottom-0 lg:right-0">*/}
+        <div
+          className="w-full h-full max-w[737px] max-h-[678px] absolute bottom-32
+        lg:bottom-30 lg:right-0"
+        >
+          <div
+            //className="clip-circle"
+            style={{ width: "237px", height: "178px" }}
+          >
+            <motion.div
+              variants={fadeIn("up", 0.5)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              transition={{ duration: 1, ease: "easeInOut" }}
+              style={{
+                position: "absolute",
+                bottom: "32px",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+              className="w-full h-full max-w-[737px] max-h-[678px] absolute bottom-32
+              lg:bottom-0 lg:right-[8%]"
+            >
+              <Avatar />
+            </motion.div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
