@@ -10,7 +10,7 @@ const Avatar = () => {
           width={737}
           height={678}
           alt=""
-          className="translate-z-0 w-full h-full bg-transparent bottom-0 right-12"
+          className="translate-z-0 w-full h-full bg-transparent bottom-0 right-12 mt-0"
           //className="translate-z-0 w-2/3 h-auto bg-transparent absolute bottom-0 right-12"
         />
       </div>
