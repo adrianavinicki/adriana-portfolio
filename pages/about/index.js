@@ -111,22 +111,15 @@ const About = () => {
       >
         {/* text */}
         <div className="flex-1 flex flex-col justify-center ">
-          <h2 className="h2">
-            hola <spam className="text-accent">veo que pongo </spam> que tal....
+          <h2 className="text-xl sm:text-3xl h2">
+            Finance to Tech: <spam className="text-accent">A Journey of </spam>{" "}
+            Leadership and System Building
           </h2>
           <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-            For several years, I dedicated myself to the world of finance and
-            business administration, had the privilege of leading impactful
-            projects and diverse teams, and launched companies across Latin
-            America. However, I believe that personal and professional growth
-            stems from embracing new challenges. That is why I embarked on an
-            exciting transition into the world of technology. My primary focus
-            and passion lie in the back end, where I relish building robust,
-            efficient systems that power web applications. I strongly believe
-            that the skills and mindset cultivated in my previous career are
-            invaluable in the tech world. My ability to strategize, adapt, and
-            lead teams brings a unique perspective to problem-solving in the
-            ever-evolving tech landscape.
+            Dedicated finance professional with impactful leadership experience,
+            transitioning to technology. Passionate about building robust
+            backend systems for web applications, leveraging skills from
+            previous career to bring a unique perspective to tech challenges.
           </p>
           {/* counters */}
           <div className="flex flex-1 xl:gap-x-6">

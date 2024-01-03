@@ -79,7 +79,9 @@ const Home = () => {
          xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
         ></div>
         {/* particles */}
-        <ParticlesContainer />
+        <div>
+          <ParticlesContainer />
+        </div>
         {/* avatar img */}
         {/*<div className="relative bottom-16 lg:bottom-0 lg:right-0">*/}
         <div
