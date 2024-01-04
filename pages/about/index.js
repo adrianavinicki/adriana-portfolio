@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 
 // icons
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaFigma,
+  FaNode,
+} from "react-icons/fa";
 
-import { SiNextdotjs, SiFramer } from "react-icons/si";
+import { SiFramer } from "react-icons/si";
 
 // components
 import Avatar from "../../components/Avatar";
@@ -29,7 +36,7 @@ const aboutData = [
           <FaCss3 />,
           <FaJs />,
           <FaReact />,
-          <SiNextdotjs />,
+          <FaNode />,
           <SiFramer />,
         ],
       },
@@ -40,6 +47,7 @@ const aboutData = [
     ],
   },
   {
+    /*
     title: "awards",
     info: [
       {
@@ -51,21 +59,38 @@ const aboutData = [
         stage: "2009 - 2010",
       },
     ],
+  */
   },
   {
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Finance Manager - Manuel Mezquita SA",
+        stage: "2022 - Present",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Finance Manager - Propel & CAMISAJU",
+        stage: "2018 - 2022",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Finance Manager - Ed Vertice SRL",
+        stage: "2015 - 2018",
+      },
+      {
+        title: "Controller Southern Cone - Emerson",
+        stage: "2012 - 2013",
+      },
+      {
+        title: "Latin America Controller - Amway",
+        stage: "2010 - 2011",
+      },
+      {
+        title: "Finance Manager Arg/Chi/Uru - Amway",
+        stage: "1992 - 2010",
+      },
+      {
+        title: "Planning & Reporting Supervisor - Tupperware",
+        stage: "1983 - 1992",
       },
     ],
   },
@@ -149,7 +174,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2-xl xl:text-4-xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={30} duration={5} /> +
+                  <CountUp start={0} end={25} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ">
                   Years of finance experience
@@ -185,9 +210,11 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   {/* title */}
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                  <div className="hidden md:flex">-</div>
-                  <div>{item.stage}</div>
+                  <div className="font-light mb-2 md:mb-0">
+                    {item.title} ({item.stage})
+                  </div>
+                  {/*<div className="hidden md:flex">-</div>
+                  <div>{item.stage}</div>*/}
                   <div className="flex gap-x-4">
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex) => {
