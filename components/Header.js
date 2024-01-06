@@ -20,7 +20,7 @@ const Header = () => {
             className="text-white mt-10 text-center md:text-center lg:text-left text-2xl md:text-3xl lg:text-4xl"
             style={{ fontWeight: "bolder" }}
           >
-            Adriana Vinicki
+            adriana vinicki
           </span>
           {/*</div>*/}
           {/* socials */}
