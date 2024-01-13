@@ -17,7 +17,7 @@ const Services = () => {
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">
       <Circles />
-      <div className="container mx-auto">
+      <div className="container mx-auto text-center">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 ">
@@ -35,9 +35,13 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] max-auto lg:mx-0"
+              className="mb-4 max-w-[400px] mx-auto text-center xl:text-left"
             >
-              Aca ver que voy a poner lalalalalal y llalalallalal
+              I bring a diverse background in finance, business, and technology.
+              A seasoned problem-solver, I excel in optimizing financial
+              operations and crafting software solutions. As a dedicated team
+              player, I thrive on collaboration, working seamlessly with diverse
+              teams to achieve shared goals.
             </motion.p>
           </div>
           {/* slider */}
