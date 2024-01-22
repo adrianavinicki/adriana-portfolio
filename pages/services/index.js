@@ -1,9 +1,3 @@
-// icons
-//import {} from "react-icons/rx";
-
-// services data
-//export const serviceData = [];
-
 // components
 import ServiceSlider from "../../components/ServiceSlider";
 import Bulb from "../../components/Bulb";
