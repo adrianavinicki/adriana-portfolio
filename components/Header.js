@@ -17,7 +17,7 @@ const Header = () => {
         >
           {/* Nombre */}
           <span
-            className="text-white mt-10 text-center md:text-center lg:text-left text-2xl md:text-3xl lg:text-4xl"
+            className="text-white mt-0 text-center md:text-center lg:text-left text-2xl md:text-3xl lg:text-4xl"
             style={{ fontWeight: "bolder" }}
           >
             adriana vinicki

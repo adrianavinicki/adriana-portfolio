@@ -14,7 +14,7 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
+    <div className="bg-primary/60 mt-5 h-full">
       {/* text */}
       <div
         className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30
@@ -45,7 +45,7 @@ const Home = () => {
             animate="show"
             exit="hidden"
             style={{ width: "100%" }}
-            className="max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-5 xl:mb-16 break-words"
+            className="max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 break-words"
           >
             For years, I navigated finance and business, leading impactful
             projects and launching companies across Latin America. Seeking
