@@ -61,7 +61,7 @@ const workSlides = {
           subtitle: "a door to CREATION",
           description:
             "E-commerce to buy musical instruments creators of the best music",
-          path: "/LogoWhite.png",
+          path: "/project-2.png",
           link: "https://stringsandkeys.up.railway.app/",
         },
         {
@@ -121,7 +121,7 @@ const WorkSlider = () => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]"
+      className="h-[380px] sm:h-[480px]"
     >
       {workSlides.slides.map((slide, index) => {
         return (
@@ -135,11 +135,11 @@ const WorkSlider = () => {
                     key={index}
                   >
                     <div
-                      className="flex items-center justify-center relative
+                      className="mt-5 flex items-center justify-center relative
                     over-flow-hidden group"
                     >
                       {/* image */}
-                      <Image src={image.path} width={200} height={100} alt="" />
+                      <Image src={image.path} width={160} height={100} alt="" />
                       {/* overlay gradient */}
                       <div
                         className="absolute inset-0 bg-gradient-to-l

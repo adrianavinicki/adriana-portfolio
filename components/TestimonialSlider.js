@@ -1,5 +1,22 @@
-// testimonial data
-const testimonialData = [
+// import swiper react components
+import { Swiper, SwiperSlide, SwiperSlider } from "swiper/react";
+
+// impoer swiper style
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+//import required modules
+import { Navigation, Pagination } from "swiper";
+
+// icons
+import { FaQuoteLeft } from "react-icons/fa";
+
+//import next image
+import Image from "next/image";
+
+// data
+const testimonialSlider = [
   {
     image: "/daniel.png",
     name: "Daniel Puggioni",
@@ -26,14 +43,14 @@ const testimonialData = [
     name: "Roman Jasidakis",
     position: "Manager at Nuvo Cosméticos",
     message:
-      "He trabajado con Adriana muchos años, en los cueles hemos hecho un excelente equipo de trabajo. Adriana es una profesional con un alto seniority. Gran conocimiento de la función y tarea Adm/Financiera, marcado perfil para el trabajo en corporaciones internacionales, experiencia, manejo de situaciones conflictivas, adaptación a los cambios y al uso de diferentes herramientas ... en fin, mucho de lo que soy como profesional hoy se lo debo a Adriana.Y no solo eso, sino que también contribuyo a formar en mi una fuerte base (técnica, de razonamiento) que me sirvió para destacarme en futuros entornos muy competitivos. Una profesional con un fuerte perfil Administrativo Financiero, pero totalmente volcada a la obtención de resultados y a la mejora en la performance de la organización.",
+      "I have worked with Adriana for many years, in which we have made an excellent work team. Adriana is a professional with high seniority. Great knowledge of the Adm/Financial function and task, a strong profile for working in international corporations, experience, handling conflict situations, adaptation to changes and the use of different tools... in short, a lot of what I am as a professional Today I owe it to Adriana. And not only that, but it also contributed to forming a strong base in me (technical, reasoning) that helped me stand out in future very competitive environments. A professional with a strong Financial Administrative profile, but totally dedicated to obtaining results and improving the organization's performance.",
   },
   {
     image: "/carlos.png",
     name: "Carlos Fidanza",
     position: "Swiss Just Latinoamerica",
     message:
-      "He compartido con Adriana durante más de 15 años el Comité de la Cámara Argentina de Venta Directa, en la cual hemos trabajado sobre proyectos correspondientes a la industria, y compartido información de alto valor apar el cuidado de las Empresas que conforman la Cámara, considerando que su aportes y trabajos han podido ser aplicados en su totalidad. En el último año, tuve la oportunidad de compartir, desarrollar e implementar el sistema de información, planning, prsupuesto y control Coprorativo ne Essen Alumninio S.A., siendo Adriana la Project Leader del proceso que se llevo a cabo en tiempos verdaderamente muy cortos. Recomiendo a Adriana, no sólo por sus conocimientos, practicidad y efectividad, sino además por sus conocimientos de la Venta Directa y sobre todo por su calidad personal, siendo ejemplo de honestidad, integridad y valores humanos.",
+      "I have shared with Adriana more than 15 years in the Committee of the Argentine Chamber of Direct Sales, we have worked on projects corresponding to the industry, and shared information of high value for the care of the Companies that make up the Chamber, considering that their contributions and works have been able to be applied in their entirety. In the last year, I had the opportunity to share, develop and implement the information, planning, budget and Corporate control system in an important Direct Selling company, with Adriana being the Project Leader of the process that was carried out in truly very short times. I recommend Adriana, not only for her knowledge, practicality and effectiveness, but also for her knowledge of Direct Selling and above all for her personal quality, being an example of honesty, integrity and human values.",
   },
   {
     image: "/hilda.png",
@@ -44,184 +61,64 @@ const testimonialData = [
   },
 ];
 
-// import swiper react components
-import { Swiper, SwiperSlide, SwiperSlider } from "swiper/react";
-
-// impoer swiper style
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-
-//import required modules
-import { Pagination } from "swiper";
-
-// icons
-import { BsArrowRight } from "react-icons/bs";
-
-//import next image
-import Image from "next/image";
-
-// data
-const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: "Wonder Toys",
-          subtitle: "a children's DREAM",
-          description:
-            "E-commerce website for children's toys where shopping becomes a game",
-          path: "/project-1.png",
-          link: "https://wondertoys.up.railway.app/",
-        },
-        {
-          title: "Wonder Toys",
-          subtitle: "a children's DREAM",
-          description:
-            "E-commerce website for children's toys where shopping becomes a game",
-          path: "/wonder4.png",
-          link: "https://wondertoys.up.railway.app/",
-        },
-        {
-          title: "Wonder Toys",
-          subtitle: "a children's DREAM",
-          description:
-            "E-commerce website for children's toys where shopping becomes a game",
-          path: "/wonder1.png",
-          link: "https://wondertoys.up.railway.app/",
-        },
-        {
-          title: "Wonder Toys",
-          subtitle: "a children's DREAM",
-          description:
-            "E-commerce website for children's toys where shopping becomes a game",
-          path: "/wonder3.png",
-          link: "https://wondertoys.up.railway.app/",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: "Strings And Keys",
-          subtitle: "a door to CREATION",
-          description:
-            "E-commerce to buy musical instruments creators of the best music",
-          path: "/LogoWhite.png",
-          link: "https://stringsandkeys.up.railway.app/",
-        },
-        {
-          title: "Strings And Keys",
-          subtitle: "a door to CREATION",
-          description:
-            "E-commerce to buy musical instruments creators of the best music",
-          path: "/strings4.png",
-          link: "https://stringsandkeys.up.railway.app/",
-        },
-        {
-          title: "Strings And Keys",
-          subtitle: "a door to CREATION",
-          description:
-            "E-commerce to buy musical instruments creators of the best music",
-          path: "/strings1.png",
-          link: "https://stringsandkeys.up.railway.app/",
-        },
-        {
-          title: "Strings And Keys",
-          subtitle: "a door to CREATION",
-          description:
-            "E-commerce to buy musical instruments creators of the best music",
-          path: "/strings3.png",
-          link: "https://stringsandkeys.up.railway.app/",
-        },
-      ],
-    },
-  ],
-};
-
-//ACA hay que ver si podemos enganchar el link como en projects, solo puse uno de ejemplo arriba, la constante projects viene del otro portfolio
-export const projects = [
-  {
-    title: "Wonder Toys",
-    subtitle: "a children's DREAM",
-    description:
-      "E-commerce website for children's toys where shopping becomes a game",
-    image: "./project-1.png",
-    link: "https://wondertoys.up.railway.app/",
-  },
-  {
-    title: "Strings And Keys",
-    subtitle: "a door to CREATION",
-    description:
-      "E-commerce to buy musical instruments creators of the best music",
-    image: "./project-2.png",
-    link: "https://stringsandkeys.up.railway.app/",
-  },
-];
-
-const Testimoniallider = () => {
+const TestimonialSlider = () => {
   return (
     <Swiper
-      spaceBetween={10}
+      navigation={true}
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]"
+      modules={[Navigation, Pagination]}
+      className="h-[470px]"
     >
-      {workSlides.slides.map((slide, index) => {
+      {testimonialSlider.map((person, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-1 cursor-pointer">
-              {slide.images.map((image, index) => {
-                return (
-                  <div
-                    className="relative rounded-lg overflow-hidden flex items-center
-                    justify-center group"
-                    key={index}
-                  >
-                    <div
-                      className="flex items-center justify-center relative
-                    over-flow-hidden group"
-                    >
-                      {/* image */}
-                      <Image src={image.path} width={200} height={100} alt="" />
-                      {/* overlay gradient */}
-                      <div
-                        className="absolute inset-0 bg-gradient-to-l
-                    from-transparent  via-[#e838cc] to-[#4a22bd] opacity-0 
-                    group-hover:opacity-80 transition-all duration-700"
-                      >
-                        {/* title */}
-                        <div
-                          className="absolute  bottom-0 translate-y-full
-                        group-hover:-translate-y-10 group-hover:xl:-translate-y-20
-                        transition-all duration-300"
-                        >
-                          <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                            {/* title part 1 */}
-                            <div className="delay-100">Live</div>
-                            {/* title part 2 */}
-                            <div
-                              className="translate-y-[500%] group-hover:translate-y-0
-                            transition-all duration-300 delay-150"
-                            >
-                              Project
-                            </div>
-                            {/* icon */}
-                            <div
-                              className="text-xl translate-y-[500%]
-                            group-hover:translate-y-0 transition-all duration-300 delay-200"
-                            >
-                              <BsArrowRight />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            <div
+              className="flex flex-col items-center md:flex-row
+            gap-x-8 h-full px-16"
+            >
+              {/* avatar, name, position */}
+              <div
+                className="w-full max-w-[300px] flex flex-col
+              xl:justify-center items-center relative mx-auto xl:mx-0"
+              >
+                <div className="flex flex-col justify-center text-center">
+                  {/* avatar */}
+                  <div className="mb-2 mx-auto">
+                    <Image
+                      src={person.image}
+                      width={100}
+                      height={100}
+                      alt=""
+                      className="rounded-full"
+                    />
                   </div>
-                );
-              })}
+                  {/* name */}
+                  <div className="text-lg">{person.name}</div>
+                  {/* position */}
+                  <div className="text-[12px] uppercase font-extralight tracking-widest">
+                    {person.position}
+                  </div>
+                </div>
+              </div>
+              <div>
+                {/* quote & messages */}
+                <div
+                  className="flex-1 flex flex-col justify-center
+                before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0
+                xl:before:h-[200px] relative xl:pl-20"
+                >
+                  {/* quote icon */}
+                  <div className="mb-0">
+                    <FaQuoteLeft className="text-sm xl:text-6xl text-white/20 mx-auto md:mx-0" />
+                  </div>
+                  {/* message */}
+                  <div className="xl:text-xs text-center md:text-left text-xs">
+                    {person.message}
+                  </div>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
         );

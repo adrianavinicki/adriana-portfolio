@@ -21,7 +21,7 @@ const Home = () => {
     to-black/10"
       >
         <div
-          className="text-center flex flex-col justify-center xl:pt-40 xl:text-left
+          className="text-[14px] text-center flex flex-col justify-center xl:pt-40 xl:text-left
         h-full container mx-auto"
         >
           {/* title */}
@@ -45,7 +45,7 @@ const Home = () => {
             animate="show"
             exit="hidden"
             style={{ width: "100%" }}
-            className="max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 break-words"
+            className="text-[12px] xl:text-[16px] max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 break-words"
           >
             For years, I navigated finance and business, leading impactful
             projects and launching companies across Latin America. Seeking

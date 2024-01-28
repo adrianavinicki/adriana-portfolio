@@ -141,7 +141,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="sm:text-5xl h2"
+            className="text-[26px] mt-10 xl:text-5xl xl:mt-3 h2"
           >
             Finance to Tech:
             <br />
@@ -153,7 +153,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="text-[14px] max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
             Dedicated finance professional with impactful leadership experience,
             transitioning to technology. Passionate about building robust
@@ -238,7 +238,9 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   {/* title */}
-                  <div className="font-light md:mb-0">{item.title}</div>
+                  <div className="text-[14px] mt-0.5 first-line:font-light md:mb-0">
+                    {item.title}
+                  </div>
                   <div className="hidden md:flex">
                     <div> </div>
                     <div>{item.stage}</div>

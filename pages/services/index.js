@@ -29,7 +29,7 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto text-center xl:text-left"
+              className="text-[14px] mb-4 max-w-[400px] mx-auto text-center xl:text-left"
             >
               I bring a diverse background in finance, business, and technology.
               A seasoned problem-solver, I excel in optimizing financial

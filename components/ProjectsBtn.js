@@ -12,7 +12,7 @@ const ProjectsBtn = () => {
     <div className="mx-auto xl:mx-0">
       <Link
         href={"/work"}
-        className="relative w-[125px] h-[125px] flex justify-center items-center
+        className="mb-5 xl:mb-10 relative w-[100px] h-[100px] flex justify-center items-center
       bg-circleStar bg-cover bg-center bg-no-repeat group"
       >
         <Image
@@ -20,7 +20,7 @@ const ProjectsBtn = () => {
           width={80}
           height={84}
           alt=""
-          className="animate-spin-slow w-full h-full max-w-[101px] max-h-[108px]"
+          className="animate-spin-slow w-full h-full max-w-[80px] max-h-[88px]"
         />
         <HiArrowRight
           className="absolute text-4xl group-hover:translate-x-2

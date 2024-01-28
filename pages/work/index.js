@@ -20,7 +20,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-8"
+              className="mb-0 h2 xl:mt-8"
             >
               My work <spam className="text-accent">.</spam>
             </motion.h2>
@@ -29,7 +29,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-0 max-w-[500px] mx-auto text-center xl:text-left"
+              className="text-[13px] xl:text-[16px] mb-0 max-w-[500px] mx-auto text-center xl:text-left"
             >
               I bring a diverse background in finance, business, and technology.
               A seasoned problem-solver, I excel in optimizing financial
