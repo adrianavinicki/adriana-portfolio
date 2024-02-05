@@ -1,3 +1,5 @@
+"use client";
+
 // components
 import Circles from "../../components/Circles";
 
@@ -9,8 +11,18 @@ import { motion } from "framer-motion";
 
 // variants
 import { fadeIn } from "../../variants";
+import { useForm } from "react-hook-form";
+
+export const formData = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 
 const Contact = () => {
+  //const { register, handleSubmit, onSubmit } = useContactForm();
+
   return (
     <div className="h-full bg-primary/30">
       <div
@@ -36,14 +48,38 @@ const Contact = () => {
             animate="show"
             exit="hidden"
             className="flex-1 flex flex-col gap-6 w-full mx-auto "
+            //onSubmit={handleSubmit(onSubmit)}
           >
             {/* input group */}
             <div className="flex gap-x-6 w-full">
-              <input type="text" placeholder="name" className="input" />
-              <input type="text" placeholder="email" className="input" />
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="input"
+                // {...register("name")}
+                onChange={(e) => formData.name}
+              />
+              <input
+                type="text"
+                placeholder="example@domain.com"
+                className="input lowercase"
+                //{...register("email")}
+                onChange={(e) => formData.email}
+              />
             </div>
-            <input type="text" placeholder="subject" className="input" />
-            <textarea placeholder="message" className="textarea"></textarea>
+            <input
+              type="text"
+              placeholder="subject"
+              className="input"
+              //{...register("subject")}
+              onChange={(e) => formData.subject}
+            />
+            <textarea
+              placeholder="Type your message"
+              className="textarea"
+              //{...register("message")}
+              onChange={(e) => formData.message}
+            ></textarea>
             <button
               className="bt rounded-full border border-white/50
             max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center
