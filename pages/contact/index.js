@@ -31,11 +31,16 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(
+          `Error al enviar formulario: ${JSON.stringify(errorData)}`
+        );
+      }
       const data = await response.json();
 
       // Aquí puedes manejar la respuesta del servidor (éxito o error).
-      console.log(data);
+      console.log("formulario enviado con exito:", data);
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
     }
