@@ -19,7 +19,9 @@ export default async (req, res) => {
     from: "Acme <onboarding@resend.dev>",
     to: [correoPersonal],
     subject: "Mensaje de Posible Cliente",
-    react: Contact({ name, email, subject, message }),
+    react: (
+      <Contact name={name} email={email} subject={subject} message={message} />
+    ),
   });
 
   if (error) {
