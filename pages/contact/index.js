@@ -22,6 +22,24 @@ export const formData = {
 
 const Contact = () => {
   //const { register, handleSubmit, onSubmit } = useContactForm();
+  const handleFormSubmit = async () => {
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      // Aquí puedes manejar la respuesta del servidor (éxito o error).
+      console.log(data);
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+    }
+  };
 
   return (
     <div className="h-full bg-primary/30">
@@ -57,14 +75,14 @@ const Contact = () => {
                 placeholder="Full Name"
                 className="input"
                 // {...register("name")}
-                onChange={(e) => formData.name}
+                onChange={(e) => (formData.name = e.target.value)}
               />
               <input
                 type="text"
                 placeholder="example@domain.com"
                 className="input lowercase"
                 //{...register("email")}
-                onChange={(e) => formData.email}
+                onChange={(e) => (formData.email = e.target.value)}
               />
             </div>
             <input
@@ -72,15 +90,16 @@ const Contact = () => {
               placeholder="subject"
               className="input"
               //{...register("subject")}
-              onChange={(e) => formData.subject}
+              onChange={(e) => (formData.subject = e.target.value)}
             />
             <textarea
               placeholder="Type your message"
               className="textarea"
               //{...register("message")}
-              onChange={(e) => formData.message}
+              onChange={(e) => (formData.message = e.target.value)}
             ></textarea>
             <button
+              onClick={handleFormSubmit}
               className="bt rounded-full border border-white/50
             max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center
              overflow:hidden hover:border-accent group"
