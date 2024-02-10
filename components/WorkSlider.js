@@ -1,5 +1,6 @@
 // import swiper react components
 import { Swiper, SwiperSlide, SwiperSlider } from "swiper/react";
+import Link from "next/link";
 
 // impoer swiper style
 import "swiper/css";
@@ -36,7 +37,7 @@ const workSlides = {
           path: "/wonder4.png",
           link: "https://wondertoys.up.railway.app/",
         },
-        {
+        /* {
           title: "Wonder Toys",
           subtitle: "a children's DREAM",
           description:
@@ -51,7 +52,7 @@ const workSlides = {
             "E-commerce website for children's toys where shopping becomes a game",
           path: "/wonder3.png",
           link: "https://wondertoys.up.railway.app/",
-        },
+        },*/
       ],
     },
     {
@@ -64,14 +65,14 @@ const workSlides = {
           path: "/project-2.png",
           link: "https://stringsandkeys.up.railway.app/",
         },
-        {
+        /* {
           title: "Strings And Keys",
           subtitle: "a door to CREATION",
           description:
             "E-commerce to buy musical instruments creators of the best music",
           path: "/strings4.png",
           link: "https://stringsandkeys.up.railway.app/",
-        },
+        },*/
         {
           title: "Strings And Keys",
           subtitle: "a door to CREATION",
@@ -80,14 +81,14 @@ const workSlides = {
           path: "/strings1.png",
           link: "https://stringsandkeys.up.railway.app/",
         },
-        {
+        /*{
           title: "Strings And Keys",
           subtitle: "a door to CREATION",
           description:
             "E-commerce to buy musical instruments creators of the best music",
           path: "/strings3.png",
           link: "https://stringsandkeys.up.railway.app/",
-        },
+        },*/
       ],
     },
   ],
@@ -139,7 +140,7 @@ const WorkSlider = () => {
                     over-flow-hidden group"
                     >
                       {/* image */}
-                      <Image src={image.path} width={160} height={100} alt="" />
+                      <Image src={image.path} width={260} height={100} alt="" />
                       {/* overlay gradient */}
                       <div
                         className="absolute inset-0 bg-gradient-to-l
@@ -154,21 +155,26 @@ const WorkSlider = () => {
                         >
                           <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
                             {/* title part 1 */}
-                            <div className="delay-100">Live</div>
+                            {/*<div className="delay-100">Live</div>*/}
                             {/* title part 2 */}
-                            <div
-                              className="translate-y-[500%] group-hover:translate-y-0
+                            <Link
+                              href={image.link}
+                              className="flex items-center justify-center"
+                            >
+                              <div
+                                className="translate-y-[-50%] group-hover:translate-y-0
                             transition-all duration-300 delay-150"
-                            >
-                              Project
-                            </div>
-                            {/* icon */}
-                            <div
-                              className="text-xl translate-y-[500%]
+                              >
+                                Project
+                              </div>
+                              {/* icon */}
+                              <div
+                                className="text-xl translate-y-[-50%]
                             group-hover:translate-y-0 transition-all duration-300 delay-200"
-                            >
-                              <BsArrowRight />
-                            </div>
+                              >
+                                <BsArrowRight />
+                              </div>
+                            </Link>
                           </div>
                         </div>
                       </div>
