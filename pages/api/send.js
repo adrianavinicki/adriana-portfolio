@@ -7,6 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const correoPersonal = process.env.CORREO_PERSONAL;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method Not Allowed" });
