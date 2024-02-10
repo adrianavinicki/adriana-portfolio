@@ -21,7 +21,6 @@ export const formData = {
 };
 
 const Contact = () => {
-  //const { register, handleSubmit, onSubmit } = useContactForm();
   const handleFormSubmit = async () => {
     try {
       const response = await fetch("/api/send", {
@@ -71,7 +70,6 @@ const Contact = () => {
             animate="show"
             exit="hidden"
             className="flex-1 flex flex-col gap-6 w-full mx-auto "
-            //onSubmit={handleSubmit(onSubmit)}
           >
             {/* input group */}
             <div className="flex gap-x-6 w-full">
@@ -127,5 +125,9 @@ const Contact = () => {
     </div>
   );
 };
+
+/*interface EmailTemplateProps {
+  firstName: string;
+}*/
 
 export default Contact;

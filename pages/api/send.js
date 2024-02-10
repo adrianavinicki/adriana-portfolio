@@ -14,15 +14,16 @@ export default async (req, res) => {
     return res.status(405).json({ error: "Method Not Allowed" });
 
   const { name, email, subject, message } = req.body;
+  console.log("y pruebo nuevamente si body recibe:", req.body);
 
   const { data, error } = await resend.emails.send({
     from: "Acme <onboarding@resend.dev>",
     to: [correoPersonal],
     subject: "Mensaje de Posible Cliente",
-    react: (
-      <Contact name={name} email={email} subject={subject} message={message} />
-    ),
+    //react: Contact({ name, email, subject, message }),
+    text: `Nombre: ${name}\nEmail: ${email}\nAsunto: ${subject}\nMensaje: ${message}`,
   });
+  console.log("este seria el mail:", { name, email, subject, message });
 
   if (error) {
     return res.status(400).json(error);
